@@ -1,6 +1,7 @@
 ASK PYPI
+========
 
-Ask PyPI about whether a Python Package has alreadbeen released under a given name.
+Ask PyPI about whether a Python Package has alread been released/registered under a given name.
 
 .. start-badges
 
@@ -47,8 +48,7 @@ Features
 
 1. **ask_pypi** `python package`
 
-   a. **Great Feature**
-   b. **Nice Feature**
+   a. **is-pypi-package** cli to check PyPI about a given package
 
 2. **Test Suite** using `Pytest`
 3. **Parallel Execution** of Unit Tests, on multiple cpu's
@@ -67,10 +67,6 @@ Features
    b. **Parallel Job** execution, generated from the `matrix`, that runs the `Test Suite`
 
 
-Prerequisites
-=============
-
-You need to have `Python` installed.
 
 Quickstart
 ==========
@@ -79,10 +75,30 @@ Using `pip` is the approved way for installing `ask_pypi`.
 
 .. code-block:: sh
 
-    python3 -m pip install ask_pypi
+    python3 -m pip install --user ask_pypi
 
 
-TODO demonstrate a use case
+Usage
+-----
+
+Open a console (ie terminal) and run:
+
+.. code-block:: sh
+
+    is-pypi-package so-magic
+
+    echo $?
+
+Observer that the exit code is 0, since there IS a package named `so-magic` on pypi.org.
+
+.. code-block:: sh
+
+    is-pypi-package ubaspidfbpasuidbf
+
+    echo $?
+
+Observer that the exit code is 1, since there is NOT a package named `ubaspidfbpasuidbf` on pypi.org.
+
 
 License
 =======
