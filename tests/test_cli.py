@@ -63,6 +63,7 @@ def test_existing_package(get_cli_invocation):
         'so-magic',
         )()
     assert result.exit_code == 0
+    assert result.stdout == 'None'
     assert result.stderr == 'None'
 
 
@@ -72,13 +73,5 @@ def test_non_existing_package(get_cli_invocation):
         'asbelfiuhbyywbefobaosf98234',
         )()
     assert result.exit_code == 1
+    assert result.stdout == 'None'
     assert result.stderr == 'None'
-
-
-# def test_when_error_happens(get_cli_invocation):
-#     result = get_cli_invocation(
-#         'is-pypi-package',
-#         'asbelfiuhbyywbefobaosf98234',
-#         )()
-#     assert result.exit_code == 1
-#     assert result.stderr == 'None'

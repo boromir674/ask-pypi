@@ -1,13 +1,14 @@
 
 import sys
 from collections import defaultdict
+from typing import Dict
 
-from .pypi_project import pypi
+from .pypi_project import is_project as is_pypi_project
 
 
 def _check_pypi(package_name: str):
     try:
-        if pypi.is_project(package_name):
+        if is_pypi_project(package_name):
             return 'found'
         return 'not-found'
     except Exception as error:
@@ -16,7 +17,7 @@ def _check_pypi(package_name: str):
 
 
 def check_pypi(package_name: str):
-    PYTHON_2_SYS = defaultdict(lambda: 2, **{
+    PYTHON_2_SYS: Dict[str, int] = defaultdict(lambda: 2, **{
         'found': 0,
         'not-found': 1,
         'error': 2,
