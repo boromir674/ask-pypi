@@ -34,9 +34,9 @@ Ask PyPI about whether a Python Package has alread been released/registered unde
     :alt: Supported Python versions
     :target: https://pypi.org/project/ask_pypi
 
-.. |commits_since_specific_tag_on_master| image:: https://img.shields.io/github/commits-since/boromir674/ask-pypi/v0.5.0/master?color=blue&logo=github
+.. |commits_since_specific_tag_on_master| image:: https://img.shields.io/github/commits-since/boromir674/ask-pypi/v0.6.0/master?color=blue&logo=github
     :alt: GitHub commits since tagged version (branch)
-    :target: https://github.com/boromir674/ask-pypi/compare/v0.5.0..master
+    :target: https://github.com/boromir674/ask-pypi/compare/v0.6.0..master
 
 .. |commits_since_latest_github_release| image:: https://img.shields.io/github/commits-since/boromir674/ask-pypi/latest?color=blue&logo=semver&sort=semver
     :alt: GitHub commits since latest release (by SemVer)
